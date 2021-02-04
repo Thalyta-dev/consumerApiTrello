@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+  
+}
+.caixa{
+    width: 100% ;
+    height:100%;
+    padding: 60px;
+}
+body{
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fb7777;
+    color: rgb(255, 255, 255);
+
+}
+.texto{
+    justify-content: center;
+    padding-left: 120px;
+    padding-bottom: 60px;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    color: aliceblue;
+    grid-template-columns: repeat(2,2fr);
+    justify-content: center;
+
+}
+.but .butinput{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #b5fcf0;
+    box-shadow: 20px black;
+    cursor: pointer;
+    margin-top: 30px;
+    transition:backgroud 0,3s
+    
+}
+.butinput:hover{
+
+    background-color: #33CCCC;
+}
+
+    .nameboard, .but, .namecard, .text, .checkbox,.tags, .position{
+    margin-bottom: 20px;
+    margin-left: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.chek{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    border:0px;
+    box-shadow: none;
+    
+}
+ .nome, .card, .op, .butinput, .textcaixa, .tag,.chek {
+    margin-top: 10px;
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+}
+.textcaixa{
+    height: 150px;
+}
+.tags{
+    width: 500px; 
+}
+.tag{
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    margin-top: 0;
+    
+}
+.button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8, .button9, .button10, .button11, .button12{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border-color: black;
+    border:0,1rem;
+}
+.texto{
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+.button1{
+
+}
+@media(max-width:1024px){
+    .caixa{
+
+        padding: 20px;
+
+    }
+    .nome, .card, .op, .butinput, .textcaixa, .tag,.chek {
+        margin-top: 10px;
+        width: 400px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+
+}
+
+@media(max-width:900px){
+    .container{
+        width: 50%;
+        height: 120%;
+        padding:0px;
+        display: grid;
+        grid-template-columns: 200px;
+        justify-content: center;
+    }
+    .nameboard, .but, .namecard, .text, .checkbox,.tags, .position{
+        margin:0px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border:none;
+        box-shadow: none;
+    }
+    .caixa{
+        width: 100% ;
+        height:100%;
+        padding: 0px;
+    }
+    .but{
+        margin-top: 30px;
+    }
+
+}

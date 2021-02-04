@@ -1,0 +1,9 @@
+.buttonColor{
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background-color:  #33CCCC;;
+    border-color: black;
+    border:0,1rem;
+}
