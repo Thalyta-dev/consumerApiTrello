@@ -12,11 +12,17 @@
     Depois desses comandos irá abrir uma janela no seu navegador padrão com a aplicação.
 
 # E agora, como fazer seu card ? Simples, só seguir os passos
-    ## Primeiro é necessario você pegar a sua key e o seu token para acessar o seu trelo, segue os passos:
-        1. Faça login do seu trelo
-        2. acesse: **https://trello.com/app-key** e copie a key
-        3. Aperte do link **Token** e copie o token
-    ## Agora é só acessar a pasta do projeto e fazer os seguintes passos
-    1. Vá na pasta **src** e no arquivo **api.js**
-    2. Mude as constantes **token** e **key** para as que você pegou nos passos acima.
+
+ ## Primeiro é necessario você pegar a sua key e o seu token para acessar o seu trelo, segue os passos:
+   
+1. Faça login do seu trelo
+
+2. acesse: **https://trello.com/app-key** e copie a key
+
+3. Aperte do link **Token** e copie o token
+
+## Agora é só acessar a pasta do projeto e fazer os seguintes passos
+
+1. Vá na pasta **src** e no arquivo **api.js**
+2. Mude as constantes **token** e **key** para as que você pegou nos passos acima.
 
