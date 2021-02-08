@@ -1,25 +1,9 @@
-import axios from 'axios'
-
-import React from 'react'
-//token e key
-
-
 
 export function Api(propsname, propscard, propsdesc, propsoption, propscheckbox, propstags) {
 
   const token = "a787b470d0bc4548f0c6e872d9b44d3ed76c6cf1603e54d9fde4fffd882488a7"
-
   const key = "4d328cada82fe26c62b0131c76892230";
-
   const createBoard = 'https://api.trello.com/1/boards/?key=' + key + '&token=' + token + '&name=' + propsname
-
-  const name = propstags.map(function (tags) {
-    return tags;
-  });
-
-
-
-
 
   let getId = fetch(createBoard, {
     method: 'POST'
@@ -52,7 +36,6 @@ export function Api(propsname, propscard, propsdesc, propsoption, propscheckbox,
 
     });
     
-
     //criar uma lista 
     let getIdList = fetch(getList, {
       method: 'GET'

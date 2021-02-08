@@ -14,50 +14,39 @@ class forms extends React.Component {
       text: '',
       checkbox: "i",
       option:0,
-      tags:[],
-      control:[],
+      tags:[]
     };
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleTags = this.handleTags.bind(this)
-    this.control = this.control.bind(this);
 
   }
 
 
   handleChange = (eve) => {
-
     this.setState({ nome: eve.target.value });
-
-
-
   }
+
   handlecard = (eve) => {
-
     this.setState({ card: eve.target.value });
-
-
   }
+
   handleText = (eve) => {
-
     this.setState({ text: eve.target.value });
-  
-
-
   }
+
   handleOption = (eve) => {
     this.setState({ option: eve.target.value });
   }
 
+  handleCheckbox = (eve) => {
 
-    handleCheckbox = (eve) => {
     if(this.state.checkbox == eve.target.value){
       this.setState({ checkbox: "i" })
     }else{
       this.setState({ checkbox: eve.target.value });
   
-  }
+    }
     
   }
 
@@ -73,30 +62,31 @@ class forms extends React.Component {
 
   handleTags=(eve) => {
     console.log(this.state.control)
+
     this.setState(({tags}) => {
       tags.push(eve.target.value)
     }
     );
- 
+
   }
 
 
 
-   control=()=>{
-     this.setState(({control}) => {
 
-         control[0]= true
-     })
-  }
   render() {
 //let actived = this.state.checkbox != "o" && this.state.checkbox != 0? true: false 
-var button1 = this.state.control[0] == true? "buttonColor"  : "button1"
-alert(button1)
+/*let button1 = this.state.control.map( elemento => {
+     if(elemento){
+      return "buttonColor"
+     }else{
+     return "button1"
+     } 
+})*/
   var checked =(eve)=> { 
-    if( this.state.checkbox != "i" && this.state.checkbox != eve) 
+    if( this.state.checkbox != "i" && this.state.checkbox != eve){
     return true 
     
-    else{
+    }else{
       return  false
     } 
   }
@@ -107,6 +97,7 @@ alert(button1)
           Preencha as informações abaixo para criar uma board e um card no trello
         </div>
         <form onSubmit={this.handleSubmit} className="container">
+        
 
           <div className="nameboard">
             <label for="nome quadro">Nome do quadro:
@@ -144,8 +135,8 @@ alert(button1)
             <label htmlFor="tags"> Tags:
             
               <div className="tag"> 
-                <button type="button" onClick={this.control} value={this.state.tag} value="html"  class={button1}>html</button>
-                <button type="button" value={this.state.tag} value="css" onClick={this.handleTags}  class={button1}>css</button>
+                <button type="button" value={this.state.tag} value="html"  class="button1">html</button>
+                <button type="button" value={this.state.tag} value="css" onClick={this.handleTags}  class="button2" >css</button>
                 <button type="button" value={this.state.tag} value="javascript"  onClick={this.handleTags}  class="button3" >javascrip</button>
                 <button type="button" value={this.state.tag} value="ruby" onClick={this.handleTags}  class="button4" >ruby</button>
                 <button type="button" value={this.state.tag} value="C" onClick={this.handleTags} class="button5" >C</button>
@@ -166,12 +157,9 @@ alert(button1)
             <input class="butinput" type="submit" value="gerar card" />
           </div>
 
-
-
-
         </form>
-
       </div>
+      
     );
   }
 
